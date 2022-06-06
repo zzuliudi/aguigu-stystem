@@ -1,9 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-    plugins: [vue()],
-    base: "/background-system/",
     publicPath: './',
-    outputDir: 'dist',
     pages: {
         index: {
             //入口
