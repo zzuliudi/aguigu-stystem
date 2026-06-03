@@ -76,7 +76,7 @@
         <input
           class="chooseAll"
           type="checkbox"
-          :checked="isAllCheck &&cartInfoList.length"
+          :checked="isAllCheck && cartInfoList.length"
           @change="UpdateAllCartChecked($event)"
         />
         <span>全选</span>
@@ -114,6 +114,7 @@ export default {
     golist(){
       this.$router.push("/trade")
     },
+    // 获得数据
     getData() {
       this.$store.dispatch("getShopCart");
       // console.log(result);
@@ -154,14 +155,12 @@ export default {
     }, 1000),
     // 删除某一个产品的操作
     async deleteCartById(id) {
-      {
         try {
           await this.$store.dispatch("deleteCartById", id);
           this.getData();
         } catch (error) {
           alert(error.message);
         }
-      }
     },
     // 修改商品状态
     async UpdateCheckdByid(cart, event) {
@@ -176,7 +175,7 @@ export default {
           alert(error.message);
         }
       },
-    // 删除选中之后的产品
+    // 删除选中之后的产品（多选多删）
     // 得不到有效数据，因此没办法得到有效的回调函数
     async deleteAllCheckedCart() {
       try {

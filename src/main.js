@@ -35,7 +35,7 @@ Vue.use(Vuelazyload, {
     // 引入mock
 import "@/mock/mockServe"
 // 引入swiper样式
-import "swiper/css/swiper.css";
+import "swiper/swiper.css";
 // 统一接口api文件里面全部请求函数
 import * as API from "@/api"
 // console.log(API);

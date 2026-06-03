@@ -65,7 +65,6 @@ const mutations = {
 const state = {
         // 初始值不要瞎写
         shopCart: [],
-
     }
     // 计算属性，为了简化数据而生
 const getters = {

@@ -20,11 +20,13 @@ export default {
   },
   props: ["skuImageList"],
   mounted() {
+    // 下方图片点击时在组件挂载之前展示
     this.$bus.$on("getIndex", (index) => {
       this.currentIndex = index;
     });
   },
   computed: {
+    // 返回的有可能是空对象即undefined或者空对象
     imgObj() {
       return this.skuImageList[this.currentIndex] || {};
     },

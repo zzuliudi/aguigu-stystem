@@ -14,8 +14,7 @@
             >请您在提交订单<em class="orange time">4小时</em
             >之内完成支付，超时订单会自动取消。订单号：<em>{{
               orderId
-            }}</em></span
-          >
+            }}</em></span>
           <span class="fr"
             ><em class="lead">应付金额：</em
             ><em class="orange money">￥{{ payInfo.totalFee }}</em></span
@@ -129,6 +128,7 @@ export default {
       //  生成二维码
       let url = await QRCode.toDataURL(this.payInfo.codeUrl);
       this.$alert(`<img src=${url} />`, "请你微信支付", {
+        // 是否将 message 属性作为 HTML 片段处理
         dangerouslyUseHTMLString: true,
         // 中间布局
         center: true,

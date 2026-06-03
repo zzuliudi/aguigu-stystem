@@ -23,6 +23,7 @@ export default {
   props: ["skuImageList"],
   watch: {
     skuImageList(newvalue, oldvalue) {
+      // 分页器
       this.$nextTick(() => {
         new Swiper(this.$refs.cur, {
           // 如果需要前进后退按钮

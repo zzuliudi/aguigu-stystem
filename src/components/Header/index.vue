@@ -71,6 +71,7 @@ export default {
     this.$bus.$on("clear", () => {
       this.keyword = "";
     });
+    
   },
   methods: {
     // 搜索按钮的回调函数：

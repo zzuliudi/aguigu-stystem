@@ -370,8 +370,8 @@ export default {
   },
   computed: {
     ...mapGetters(["categoryView", "skuInfo", "spuSaleAttrList"]),
+    //  如果服务器数据没有回来，skuInfo这个对象是空对象
     skuImageList() {
-      //  如果服务器数据没有回来，skuInfo这个对象是空对象
       return this.skuInfo.skuImageList || [];
     },
   },

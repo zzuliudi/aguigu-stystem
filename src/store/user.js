@@ -6,7 +6,7 @@ const actions = {
     async getCode({ commit }, phone) {
         // params形参：当用户派发action的时候，第二个参数传递过来的，至少是一个空对象
         let result = await reqGetCode(phone)
-            // console.log(result);
+            console.log(result);
             // console.log(result);
         if (result.code == 200) {
             commit("GETCODE", result.data)
@@ -64,7 +64,7 @@ const actions = {
 }
 const mutations = {
     GETCODE(state, Code) {
-        state.data = Code;
+        state.code = Code;
     },
     USERLOGIN(state, token) {
         state.token = token

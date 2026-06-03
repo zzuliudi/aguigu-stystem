@@ -50,7 +50,7 @@
                     >综合
                     <span
                       v-show="isOne"
-                      class="iconfont icon-arrowdown"
+                      class="iconfont"
                       :class="{
                         'icon-arrowdown': isDesc,
                         'icon-arrowup': isAsc,
@@ -209,10 +209,9 @@ export default {
       if (this.$route.params) {
         this.$router.push({ name: "search", params: this.$route.params });
       }
-      删除关键字;
     },
     // 删除关键字
-    removeKeyword() {
+    removekeyword() {
       //给服务器带的参数searchParams的keyword置空
       this.searchParams.keyword = undefined;
       //再次发请求

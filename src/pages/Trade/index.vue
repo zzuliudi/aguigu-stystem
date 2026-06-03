@@ -132,6 +132,7 @@ export default {
       addresssList: (state) => state.trade.addressInfo,
       OrderInfo: (state) => state.trade.orderinfo,
     }),
+    // 对应地址
     userDefaultaAdress() {
       //  find找到数组里面符合要求的数组
       return this.addresssList.find((item) => item.isDefault == 1) || {};
@@ -161,7 +162,7 @@ export default {
       // 带参数
       let result = await this.$API.reqSubmitOrder(tradeNo, data);
       console.log(result);
-      if (result.code == 200) {
+      if (result.code == 200) { 
         this.orderId = result.data;
         this.$router.push("/pay?orderId="+this.orderId)
         // 路由跳转并传递参数
